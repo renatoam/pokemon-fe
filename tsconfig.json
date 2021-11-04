@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext", "ES6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "downlevelIteration": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/common/components/*"],
+      "@constants/*": ["src/common/constants/*"],
+      "@context/*": ["src/common/context/*"],
+      "@helpers/*": ["src/common/helpers/*"],
+      "@hooks/*": ["src/common/hooks/*"],
+      "@services/*": ["src/common/services/*"],
+      "@styles/*": ["src/common/styles/*"],
+      "@store/*": ["src/common/store/*"],
+      "@pages/*": ["src/pages/*"],
+      "@public/*": ["public/*"],
+      "@images/*": ["public/images/*"],
+      "@icons/*": ["public/icons/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.svg"],
+  "exclude": ["node_modules"]
+}

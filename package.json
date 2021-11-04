@@ -1,0 +1,81 @@
+{
+  "name": "novatics",
+  "version": "0.1.0",
+  "description": "Web application for Novatics' Front-End Challenge",
+  "private": true,
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "typescript",
+    "javascript",
+    "styled-components"
+  ],
+  "author": "Renato Melo",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "i18next": "^20.3.3",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "i18next-http-backend": "^1.2.6",
+    "next": "10.0.5",
+    "next-images": "^1.7.0",
+    "nextjs-progressbar": "^0.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-i18next": "^11.11.3",
+    "react-query": "^3.26.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.2",
+    "@types/styled-components": "^5.1.9",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "babel-jest": "^27.2.4",
+    "babel-plugin-inline-react-svg": "^1.1.2",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "husky": "^4.3.8",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.2.4",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.2",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.2.3",
+    "uuid": "^8.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.(ts[x]|js[x])": [
+      "eslint",
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "layout": {
+    "default": {
+      "logo": "Webmotors"
+    }
+  },
+  "modules": {
+    "home": {
+      "tabs": {
+        "buy": "Buy",
+        "car": "Car",
+        "cars": "Cars",
+        "moto": "Motorcycle",
+        "motos": "Motorcyles",
+        "sellMyCar": "Sell my car",
+        "sellMyMoto": "Sell my motorcycle"
+      },
+      "content": {
+        "new": "New",
+        "used": "Used",
+        "fields": {
+          "where": "Where: ",
+          "radius": "Radius: ",
+          "make": "Make: ",
+          "model": "Model: ",
+          "year": "Year: ",
+          "price": "Price: ",
+          "version": "Version: "
+        },
+        "search": "Advanced Search: ",
+        "clear": "Clear filters",
+        "offers": "Check offers"
+      },
+      "results": {
+        "price": "$ ",
+        "km": "KM: ",
+        "color": "Color: ",
+        "fab": "Fab.: "
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Webmotors"
+    }
+  }
+}

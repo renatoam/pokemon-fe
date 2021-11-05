@@ -1,4 +1,4 @@
-import { COMPANY_AT, FAVICON16, FAVICON32, FONT_GLOBAL } from '@constants/global';
+import { COMPANY_AT, FAVICON16, FAVICON32, FONT_GLOBAL } from '@constants/global'
 
 export interface SEOProps {
   title: string | undefined
@@ -7,7 +7,7 @@ export interface SEOProps {
   shouldIndexPage?: boolean
 }
 
-export default function SEO(props: SEOProps) {
+export default function SEO (props: SEOProps) {
   const { title, description, image, shouldIndexPage = true } = props
 
   return (

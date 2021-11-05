@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const LoadingScreen = styled.section`
   background-color: #e51515;
@@ -16,9 +16,9 @@ const LoadingScreen = styled.section`
     height: 80px;
     width: 80px;
   }
-`;
+`
 
-export default function Loading() {
+export default function Loading () {
   return (
     <>
       <LoadingScreen>
@@ -26,5 +26,5 @@ export default function Loading() {
         <p>Loading...</p>
       </LoadingScreen>
     </>
-  );
+  )
 }

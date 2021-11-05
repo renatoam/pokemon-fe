@@ -1,16 +1,16 @@
-import '@helpers/translate';
+import '@helpers/translate'
 
-import { AppProps } from 'next/app';
-import NextNprogress from 'nextjs-progressbar';
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { ThemeProvider } from 'styled-components';
+import { AppProps } from 'next/app'
+import NextNprogress from 'nextjs-progressbar'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { ThemeProvider } from 'styled-components'
 
-import { GlobalStyle } from '@styles/global';
-import { theme } from '@styles/themes';
+import { GlobalStyle } from '@styles/global'
+import { theme } from '@styles/themes'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App ({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
@@ -27,5 +27,5 @@ export default function App({ Component, pageProps }: AppProps) {
         </QueryClientProvider>
       </ThemeProvider>
     </>
-  );
+  )
 }

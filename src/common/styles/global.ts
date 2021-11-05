@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
-import { theme } from './themes';
+import { theme } from './themes'
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -832,4 +832,4 @@ header .login__modal--overlay {
   -ms-transition: transform 0.4s ease-in-out;
   -o-transition: transform 0.4s ease-in-out;
 }
-`;
+`

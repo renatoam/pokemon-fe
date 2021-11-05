@@ -1,6 +1,6 @@
-import Axios, { AxiosError } from 'axios';
+import Axios, { AxiosError } from 'axios'
 
-import { BASE_URL } from '@modules/home/constants/api';
+import { BASE_URL } from '@modules/home/constants/api'
 
 const axios = Axios.create({
   baseURL: BASE_URL

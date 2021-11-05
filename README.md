@@ -1,4 +1,10 @@
-# Next JS Boilerplate
+# Pokedex - Gerenciamento de catalogo e equipe pokemon
+
+Referencia da arquitetura: 
+https://codefoundation.co.za/clean-architecture-typescript-and-react
+
+
+---
 
 Aplicação criada como teste para o processo seletivo da Novatics. A aplicação é desenvolvida com React, utilizando o NextJS como framework.
 

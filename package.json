@@ -20,6 +20,7 @@
     "test:watch": "jest --watchAll"
   },
   "dependencies": {
+    "@mui/material": "^5.0.6",
     "axios": "^0.21.1",
     "i18next": "^20.3.3",
     "i18next-browser-languagedetector": "^6.1.2",

@@ -1,6 +1,6 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react'
 
-import { StyledH1 } from './style';
+import { StyledH1 } from './style'
 
 export interface GenericChildrenProps {
   children: ReactNode
@@ -15,17 +15,17 @@ export interface ErrorState {
 class ErrorBoundary extends Component<ErrorProps, ErrorState> {
   public state: ErrorState = { hasError: false }
 
-  public static getDerivedStateFromError(_: Error): ErrorState {
+  public static getDerivedStateFromError (_: Error): ErrorState {
     // Update state so the next render will show the fallback UI.
     return { hasError: true }
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  public componentDidCatch (error: Error, errorInfo: ErrorInfo) {
     // You can also log the error to an error reporting service
     console.error('Uncaught error: [notificação]', error, errorInfo)
   }
 
-  public render() {
+  public render () {
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return <StyledH1>Something went wrong.</StyledH1>

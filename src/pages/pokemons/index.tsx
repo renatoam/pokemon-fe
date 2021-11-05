@@ -1,33 +1,33 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
-import { PokemonType } from 'src/common/types/types';
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { useQuery } from 'react-query'
+import { PokemonType } from 'src/common/types/types'
 
-import Loading from '@components/organisms/Loading';
-import { Card, Figure, Wrapper } from '@styles/pages/home';
+import Loading from '@components/organisms/Loading'
+import { Card, Figure, Wrapper } from '@styles/pages/home'
 
 const fetcher = async () =>
   await axios.get('http://localhost:8080/pokemons', {
     params: {
-      limit: 9,
-    },
-  });
+      limit: 9
+    }
+  })
 
-export default function Pokemons() {
-  const [pokemons, setPokemons] = useState<PokemonType[]>([]);
-  const { isLoading, error, data } = useQuery('pokemons', fetcher);
+export default function Pokemons () {
+  const [pokemons, setPokemons] = useState<PokemonType[]>([])
+  const { isLoading, error, data } = useQuery('pokemons', fetcher)
 
   useEffect(() => {
-    if (!data) return;
+    if (!data) return
 
-    const rawList = data.data as PokemonType[];
-    const list = rawList.sort((pok1, pok2) => pok1.id - pok2.id);
+    const rawList = data.data as PokemonType[]
+    const list = rawList.sort((pok1, pok2) => pok1.id - pok2.id)
 
-    setPokemons(list);
-  }, [data]);
+    setPokemons(list)
+  }, [data])
 
-  if (isLoading) return <Loading />;
-  if (error) return <p>Something went wrong!</p>;
+  if (isLoading) return <Loading />
+  if (error) return <p>Something went wrong!</p>
 
   return (
     <Wrapper>
@@ -47,8 +47,8 @@ export default function Pokemons() {
               </section>
             </Card>
           </React.Fragment>
-        );
+        )
       })}
     </Wrapper>
-  );
+  )
 }

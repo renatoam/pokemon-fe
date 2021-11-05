@@ -1,50 +1,50 @@
 {
-  "common": {
-    "close": "x"
+  common: {
+    close: 'x'
   },
-  "layout": {
-    "default": {
-      "logo": "Webmotors"
+  layout: {
+    default: {
+      logo: 'Webmotors'
     }
   },
-  "modules": {
-    "home": {
-      "tabs": {
-        "buy": "Comprar",
-        "car": "Carro",
-        "cars": "Carros",
-        "moto": "Moto",
-        "motos": "Motos",
-        "sellMyCar": "Vender meu carro",
-        "sellMyMoto": "Vender minha moto"
+  modules: {
+    home: {
+      tabs: {
+        buy: 'Comprar',
+        car: 'Carro',
+        cars: 'Carros',
+        moto: 'Moto',
+        motos: 'Motos',
+        sellMyCar: 'Vender meu carro',
+        sellMyMoto: 'Vender minha moto'
       },
-      "content": {
-        "new": "Novos",
-        "used": "Usados",
-        "fields": {
-          "where": "Onde: ",
-          "radius": "Raio: ",
-          "make": "Marca: ",
-          "model": "Modelo: ",
-          "year": "Ano Desejado: ",
-          "price": "Faixa de preço: ",
-          "version": "Versão: "
+      content: {
+        new: 'Novos',
+        used: 'Usados',
+        fields: {
+          where: 'Onde: ',
+          radius: 'Raio: ',
+          make: 'Marca: ',
+          model: 'Modelo: ',
+          year: 'Ano Desejado: ',
+          price: 'Faixa de preço: ',
+          version: 'Versão: '
         },
-        "search": "Busca Avançada: ",
-        "clear": "Limpar filtros",
-        "offers": "Ver ofertas"
+        search: 'Busca Avançada: ',
+        clear: 'Limpar filtros',
+        offers: 'Ver ofertas'
       },
-      "results": {
-        "price": "R$ ",
-        "km": "KM: ",
-        "color": "Cor: ",
-        "fab": "Fab.: "
+      results: {
+        price: 'R$ ',
+        km: 'KM: ',
+        color: 'Cor: ',
+        fab: 'Fab.: '
       }
     }
   },
-  "pages": {
-    "home": {
-      "title": "Webmotors"
+  pages: {
+    home: {
+      title: 'Webmotors'
     }
   }
 }

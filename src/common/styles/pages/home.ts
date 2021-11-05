@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Wrapper = styled.section`
   background-color: ${(props) => props.theme.colors.backgroundLight};
@@ -10,7 +10,7 @@ export const Wrapper = styled.section`
   margin: 2rem auto;
   padding: var(--sp-lg);
   width: 40%;
-`;
+`
 
 export const Card = styled.section`
   display: flex;
@@ -31,7 +31,7 @@ export const Card = styled.section`
     margin-right: 0.5rem;
     width: 4rem;
   }
-`;
+`
 
 export const Figure = styled.figure`
   align-items: center;
@@ -46,4 +46,4 @@ export const Figure = styled.figure`
   img {
     width: 60%;
   }
-`;
+`

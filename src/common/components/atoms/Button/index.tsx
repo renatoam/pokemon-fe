@@ -1,6 +1,6 @@
-import Translate from '@components/configuration/Translate';
+import Translate from '@components/configuration/Translate'
 
-import { ButtonWrapper, StyledButton } from './styles';
+import { ButtonWrapper, StyledButton } from './styles'
 
 interface ButtonProps {
   text: string
@@ -9,7 +9,7 @@ interface ButtonProps {
   handleClick: () => void
 }
 
-export default function Button(props: ButtonProps) {
+export default function Button (props: ButtonProps) {
   const { text, variant = 'primary', handleClick, disabled = false } = props
 
   return (

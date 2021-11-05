@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { useTranslation } from 'react-i18next';
+import { ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface ITranslate {
   text: string

@@ -21,7 +21,7 @@ module.exports = {
     '^@helpers/(.*)$': ['<rootDir>/src/common/helpers/$1'],
     '^@hooks/(.*)$': ['<rootDir>/src/common/hooks/$1'],
     '^@pages/(.*)$': ['<rootDir>/src/pages/$1'],
-    '^@services/(.*)$': ['<rootDir>/src/common/services/$1'],
+    '^@api/(.*)$': ['<rootDir>/src/common/api/$1'],
     '^@styles/(.*)$': ['<rootDir>/src/common/styles/$1'],
     '^@store/(.*)$': ['<rootDir>/src/common/store/$1'],
     '^@public/(.*)$': ['<rootDir>/public/$1'],

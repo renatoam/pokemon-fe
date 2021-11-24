@@ -1,8 +1,15 @@
 # Pokedex - Gerenciamento de catalogo e equipe pokemon
 
-Referencia da arquitetura: 
-https://codefoundation.co.za/clean-architecture-typescript-and-react
+Estudos e análises sobre arquitetura, banco de dados e outras tecnologias para estudar aplicando tanto nesse projeto em si (POkedex), quanto nos demais projetos, como o Alohomora.
 
+## Arquitetura 
+
+
+## Créditos
+
+Type Icons on background by [Ilaria Bernareggi from the Noun Project](https://thenounproject.com/term/pokemon/)
+
+Vector Icons by [The Artificial](https://github.com/TheArtificial)
 
 ---
 

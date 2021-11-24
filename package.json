@@ -28,11 +28,14 @@
     "next": "10.0.5",
     "next-images": "^1.7.0",
     "nextjs-progressbar": "^0.0.7",
+    "pokeapi-js-wrapper": "^1.2.0",
+    "pokenode-ts": "^1.9.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-i18next": "^11.11.3",
     "react-query": "^3.26.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "web-vitals": "^2.1.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

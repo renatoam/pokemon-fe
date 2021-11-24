@@ -4,6 +4,6 @@ const withImages = require('next-images')
 module.exports = withImages({
   esModule: true,
   images: {
-    domains: ['thumbs.buscape.com.br']
+    domains: ['thumbs.buscape.com.br', 'https://res.cloudinary.com']
   }
 })

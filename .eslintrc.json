@@ -21,6 +21,8 @@
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "semi":"off",
+    "quotes":"error"
   }
 }

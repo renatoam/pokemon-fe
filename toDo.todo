@@ -1,0 +1,34 @@
+Objetivos:
+  Criar uma aplicação com diversos tipos de ferramentas para experimentação
+
+  Colocar as features, módulos e páginas...
+
+  Database:
+    ☐ Criar base de dados SQL com PostgreSQL
+      Dados para popular as tabelas (https://github.com/veekun/pokedex/tree/master/pokedex/data/csv)
+      Atenção aos relacionamentos (https://github.com/veekun/pokedex/wiki/Schema-redesign)
+      Base de dados SQLite (https://veekun.com/dex/downloads#other-files), arquivo "Full database as gzipped SQLite (15.1MB)"
+      Desenhar o relacionamento (se precisar) (https://app.dbdesigner.net/designer/schema/476323), logar com o Github
+
+    ☐ Utilizar Prisma como ORM
+      Mais fácil criar a tabela usando Beekeeper ou PgAdmin, porque é mais complicado pelo Prisma. Assim, basta usar o yarn prisma db pull e ele infere as tabelas e os relacionamentos.
+    
+    ☐ Criar base de dados MongoDB
+      O banco já está criado, mas esqueci de salvar a referência de onde eu peguei, talvez seja legal subir os dados novamente ou outros dados (provavelmente não).
+    ☐ Utilizar Mongoose como ORM
+      Usar essa base como uma API mais simples, pra algum outro objetivo na aplicação. Alguma listagem, talvez o "Inventory".
+  
+  Back-End/API:
+    O objetivo para o Back-End, inicialmente, é criar duas arquiteturas de API diferentes (obviamente só pra motivos de estudo). Ambas com Node, uma à parte usando o Repository Pattern (com models, services, controllers e routes) e outra com o Next, usando Clean Architecture.
+
+    Depois, entender onde poderia entrar Microservices e BFF.
+
+    ☐ Criar API Node com Repository Pattern
+      Pra essa API, eu vou usar os dados do MongoDB mesmo, usando Mongoose.
+
+    ☐ Criar API com API Routes do Next
+      Pra essa, vou usar os dados do PostgreSQL, usando Prisma.
+      Enquanto eu não terminar de criar e popular a base de dados, vou continuar usando a PokeAPI, através do wrapper Pokenode-ts
+
+  Front-End:
+    ...

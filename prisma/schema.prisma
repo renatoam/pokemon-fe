@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model public_Ability {
+  id             Int              @id(map: "Ability_pk") @default(dbgenerated("nextval('\"public.Ability_id_seq\"'::regclass)"))
+  name           String           @unique @db.VarChar(30)
+  public_Pokemon public_Pokemon[]
+  public_Squad   public_Squad[]
+
+  @@map("public.Ability")
+}
+
+model public_Move {
+  id             Int              @id(map: "Move_pk") @default(dbgenerated("nextval('\"public.Move_id_seq\"'::regclass)"))
+  name           String           @unique @db.VarChar(30)
+  public_Pokemon public_Pokemon[]
+
+  @@map("public.Move")
+}
+
+model public_Pokemon {
+  id                                                                 Int              @id(map: "Pokemon_pk") @default(dbgenerated("nextval('\"public.Pokemon_id_seq\"'::regclass)"))
+  name                                                               String           @unique @db.VarChar(20)
+  height                                                             Int
+  weight                                                             Int
+  types                                                              Int
+  moves                                                              Int
+  sprites                                                            Int
+  abilities                                                          Int
+  prev_evolution                                                     Int
+  next_evolution                                                     Int
+  public_Ability                                                     public_Ability   @relation(fields: [abilities], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Pokemon_fk3")
+  public_Move                                                        public_Move      @relation(fields: [moves], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Pokemon_fk1")
+  public_Pokemon_public_PokemonTopublic_Pokemon_next_evolution       public_Pokemon   @relation("public_PokemonTopublic_Pokemon_next_evolution", fields: [next_evolution], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Pokemon_fk5")
+  public_Pokemon_public_PokemonTopublic_Pokemon_prev_evolution       public_Pokemon   @relation("public_PokemonTopublic_Pokemon_prev_evolution", fields: [prev_evolution], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Pokemon_fk4")
+  public_Sprite                                                      public_Sprite    @relation(fields: [sprites], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Pokemon_fk2")
+  public_Type                                                        public_Type      @relation(fields: [types], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Pokemon_fk0")
+  other_public_Pokemon_public_PokemonTopublic_Pokemon_next_evolution public_Pokemon[] @relation("public_PokemonTopublic_Pokemon_next_evolution")
+  other_public_Pokemon_public_PokemonTopublic_Pokemon_prev_evolution public_Pokemon[] @relation("public_PokemonTopublic_Pokemon_prev_evolution")
+  public_Squad                                                       public_Squad[]
+  public_Trainer                                                     public_Trainer[]
+
+  @@map("public.Pokemon")
+}
+
+model public_Sprite {
+  id             Int              @id(map: "Sprite_pk") @default(dbgenerated("nextval('\"public.Sprite_id_seq\"'::regclass)"))
+  description    String           @unique @db.VarChar(30)
+  url            String           @unique @db.VarChar(255)
+  public_Pokemon public_Pokemon[]
+
+  @@map("public.Sprite")
+}
+
+model public_Squad {
+  id             Int              @id(map: "Squad_pk") @default(dbgenerated("nextval('\"public.Squad_id_seq\"'::regclass)"))
+  pokemons       Int
+  trainer        Int              @default(dbgenerated("nextval('\"public.Squad_trainer_seq\"'::regclass)"))
+  public_Pokemon public_Pokemon   @relation(fields: [pokemons], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Squad_fk0")
+  public_Ability public_Ability   @relation(fields: [trainer], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Squad_fk1")
+  public_Trainer public_Trainer[]
+
+  @@map("public.Squad")
+}
+
+model public_Trainer {
+  id             Int             @id(map: "Trainer_pk") @default(dbgenerated("nextval('\"public.Trainer_id_seq\"'::regclass)"))
+  name           String          @db.VarChar(30)
+  age            Int?
+  email          String          @unique @db.VarChar(30)
+  password       String          @db.VarChar(30)
+  avatar         String?         @db.VarChar(255)
+  favorite       Int?
+  squad          Int?
+  public_Pokemon public_Pokemon? @relation(fields: [favorite], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Trainer_fk0")
+  public_Squad   public_Squad?   @relation(fields: [squad], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Trainer_fk1")
+
+  @@map("public.Trainer")
+}
+
+model public_Type {
+  id             Int              @id(map: "Type_pk") @default(dbgenerated("nextval('\"public.Type_id_seq\"'::regclass)"))
+  name           String           @unique @db.VarChar(30)
+  public_Pokemon public_Pokemon[]
+
+  @@map("public.Type")
+}

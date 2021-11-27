@@ -1,3 +1,4 @@
 {
-  "todo.colors.comment": "#daf6fb"
+  "todo.colors.comment": "#daf6fb",
+  "editor.wordWrapColumn": 120
 }

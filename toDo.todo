@@ -3,8 +3,25 @@ Objetivos:
 
   Colocar as features, módulos e páginas...
 
+  Passar pro Notion:
+    Senhas no BD:
+      Resumo (TLDR): criar coluna como varchar, enviar uma senha hashed da app, salvar hash com salt.
+      - "do not use extra column for salt. Save it as password like this: {salt}{hash}"
+      Referências:
+        https://x-team.com/blog/storing-secure-passwords-with-postgresql/
+        https://bornsql.ca/blog/how-to-really-store-a-password-in-a-database/
+        https://stackoverflow.com/questions/1200326/what-is-the-datatype-for-a-password-in-postgresql
+        https://blog.codinghorror.com/youre-probably-storing-passwords-incorrectly/
+
+  Quando for inserir os dados do treinador, ler esse artigo:
+    https://x-team.com/blog/storing-secure-passwords-with-postgresql/
+
   Database:
     ☐ Criar base de dados SQL com PostgreSQL
+      ✔ Criar relacionamentos @done(21-12-01 22:13)
+      ✔ Escrever SQL tabelas @started(21-12-01 22:13) @done(21-12-01 22:13) @lasted(48s)
+      ☐ Popular tabelas
+      
       Dados para popular as tabelas (https://github.com/veekun/pokedex/tree/master/pokedex/data/csv)
       Atenção aos relacionamentos (https://github.com/veekun/pokedex/wiki/Schema-redesign)
       Base de dados SQLite (https://veekun.com/dex/downloads#other-files), arquivo "Full database as gzipped SQLite (15.1MB)"

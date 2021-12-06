@@ -60,6 +60,16 @@ CREATE TABLE types (
   PRIMARY KEY (id)
 )
 
+CREATE TABLE squad (
+  id INTEGER NOT NULL,
+  identifier VARCHAR(79) NOT NULL,
+  pokemon_id INTEGER NOT NULL,
+  is_complete BOOLEAN NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY(pokemon_id) REFERENCES pokemon (id),
+  CHECK (is_complete IN (0, 1))
+)
+
 CREATE TABLE pokemon_abilities (
   pokemon_id INTEGER NOT NULL,
   ability_id INTEGER NOT NULL,
@@ -83,16 +93,6 @@ CREATE TABLE pokemon_moves (
   ),
   FOREIGN KEY(pokemon_id) REFERENCES pokemon (id),
   FOREIGN KEY(move_id) REFERENCES moves (id),
-)
-
-CREATE TABLE squad (
-  id INTEGER NOT NULL,
-  identifier VARCHAR(79) NOT NULL,
-  pokemon_id INTEGER NOT NULL,
-  is_complete BOOLEAN NOT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY(pokemon_id) REFERENCES pokemon (id),
-  CHECK (is_complete IN (0, 1))
 )
 
 CREATE TABLE pokemon_species (

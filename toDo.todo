@@ -3,32 +3,23 @@ Objetivos:
 
   Colocar as features, módulos e páginas...
 
-  Passar pro Notion:
-    Senhas no BD:
-      Resumo (TLDR): criar coluna como varchar, enviar uma senha hashed da app, salvar hash com salt.
-      - "do not use extra column for salt. Save it as password like this: {salt}{hash}"
-      Referências:
-        https://x-team.com/blog/storing-secure-passwords-with-postgresql/
-        https://bornsql.ca/blog/how-to-really-store-a-password-in-a-database/
-        https://stackoverflow.com/questions/1200326/what-is-the-datatype-for-a-password-in-postgresql
-        https://blog.codinghorror.com/youre-probably-storing-passwords-incorrectly/
-
-  Quando for inserir os dados do treinador, ler esse artigo:
-    https://x-team.com/blog/storing-secure-passwords-with-postgresql/
-
   Database:
     ☐ Criar base de dados SQL com PostgreSQL
       ✔ Criar relacionamentos @done(21-12-01 22:13)
       ✔ Escrever SQL tabelas @started(21-12-01 22:13) @done(21-12-01 22:13) @lasted(48s)
+      ☐ Criar as tabelas no BD Heroku (lembrar da tabela sprites, se precisar)
       ☐ Popular tabelas
+      Problema na população da tabela pokemon_moves. Ela é muito grande e complicado de ficar testando e executando, mas agora parece que tem algo duplicado, preciso ver o que é.
       
-      Dados para popular as tabelas (https://github.com/veekun/pokedex/tree/master/pokedex/data/csv)
-      Atenção aos relacionamentos (https://github.com/veekun/pokedex/wiki/Schema-redesign)
-      Base de dados SQLite (https://veekun.com/dex/downloads#other-files), arquivo "Full database as gzipped SQLite (15.1MB)"
-      Desenhar o relacionamento (se precisar) (https://app.dbdesigner.net/designer/schema/476323), logar com o Github
+      - Eu não usei todas as tabelas do Veekun e seus relacionamentos, peguei só as que interessavam e seus respectivos relacionamentos com a tabela "pokemon"
+      - Converter CSV em Insert Into (https://konbert.com/convert) ou um mais completo (https://www.convertcsv.com/csv-to-sql.htm)
+      - Dados para popular as tabelas (https://github.com/veekun/pokedex/tree/master/pokedex/data/csv)
+      - Atenção aos relacionamentos (https://github.com/veekun/pokedex/wiki/Schema-redesign)
+      - Base de dados SQLite (https://veekun.com/dex/downloads#other-files), arquivo "Full database as gzipped SQLite (15.1MB)"
+      - Desenhar o relacionamento (se precisar) (https://app.dbdesigner.net/designer/schema/476323), logar com o Github
 
     ☐ Utilizar Prisma como ORM
-      Mais fácil criar a tabela usando Beekeeper ou PgAdmin, porque é mais complicado pelo Prisma. Assim, basta usar o yarn prisma db pull e ele infere as tabelas e os relacionamentos.
+      Mais fácil criar a tabela usando Beekeeper ou PgAdmin do que pelo Prisma. Assim, basta usar o yarn prisma db pull e ele infere as tabelas e os relacionamentos.
     
     ☐ Criar base de dados MongoDB
       O banco já está criado, mas esqueci de salvar a referência de onde eu peguei, talvez seja legal subir os dados novamente ou outros dados (provavelmente não).

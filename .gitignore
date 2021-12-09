@@ -4,5 +4,8 @@ yarn.lock
 .env
 .env.local
 
+# Esse arquivo é necessário pra rodar no ambiente da Ambev, que tem seu próprio registry
+.npmrc
+
 # coloquei esse arquivo aqui porque é muito grande
 src/common/api/db/queries/insert-pokemon-moves.sql

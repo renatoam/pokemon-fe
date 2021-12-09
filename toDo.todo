@@ -9,7 +9,9 @@ Objetivos:
       ✔ Escrever SQL tabelas @started(21-12-01 22:13) @done(21-12-01 22:13) @lasted(48s)
       ☐ Criar as tabelas no BD Heroku (lembrar da tabela sprites, se precisar)
       ☐ Popular tabelas
-      Problema na população da tabela pokemon_moves. Ela é muito grande e complicado de ficar testando e executando, mas agora parece que tem algo duplicado, preciso ver o que é.
+      
+      - Problema na população da tabela pokemon_moves. Ela é muito grande e complicado de ficar testando e executando, mas agora parece que tem algo duplicado, preciso ver o que é.
+      - As tabelas de junção de pokemon (stats, species e types, especificamente) com outra coisa execederam o tamanho permitido no heroku. Preciso resolver essa para em 7 dias, contando do dia 5/12.
       
       - Eu não usei todas as tabelas do Veekun e seus relacionamentos, peguei só as que interessavam e seus respectivos relacionamentos com a tabela "pokemon"
       - Converter CSV em Insert Into (https://konbert.com/convert) ou um mais completo (https://www.convertcsv.com/csv-to-sql.htm)

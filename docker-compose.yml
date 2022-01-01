@@ -1,0 +1,29 @@
+version: '3.8'
+
+volumes: ## volumes definem os mapeamentos entre pastas do file system e do container
+  data: ## Criamos um volume (ou mount) chamado "data", mas pode ser qualquer nome e podem ter vários deles
+  ## Named volumes: Quando criamos um named volume, o docker escolhe uma pasta do computador pra armazenar os dados
+  ## podemos descobrir qual pasta é essa com docker volume inspect <nomeDoVolume>. Ele fica na opção 'mountpoint'
+  ## Caso a gente queira escolher um local especifico, usamos bind mounts que é basicamente passar o caminho que queremos `/path/to/data:/usr/local/data`
+
+services: # serviços executado pelo docker
+  app: # o nome do meu serviço, pode ser qualquer nome que eu quiser
+    build: # posso usar o mesmo build gerado no dockerfile, é o que estou fazendo aqui
+      context: .
+      dockerfile: Dockerfile # usa o mesmo dockerfile do projeto, mas com customizações
+    ports: # espelhamento de portas. Quando acessarmos a porta 8080, acessaremos a porta 3000 do container
+      - "8080:3000" # Esse formato de lista, indica uma lista/array. No yml, arrays são definidos colocando um hifen antes
+    volumes: # espelhando a pasta inteira do projeto com a pasta app do container
+      - .:/app
+  database: # nome do serviço de banco de dados
+    image: postgres # isso é pra usar uma imagem já pronta do pg (postgres)
+    ports:
+      - 5432:5432 # 5432 é a porta que o pg expoe por padrão
+    environment: # definindo variáveis de ambiente
+      - POSTGRES_PASSWORD=3392
+    volumes:
+      - data:/var/lib/postgresql/data
+      # data é o volume que criei la em cima
+      # /var/lib/postgresql/data é a pasta padrão que o pg usa pra salvar os dados
+      - type: tmpfs # config pra evitar um erro de prod (https://www.youtube.com/watch?v=vrglmtlPTek)
+        target: /dev/shm

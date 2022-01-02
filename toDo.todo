@@ -3,15 +3,17 @@ Objetivos:
 
   Colocar as features, módulos e páginas...
 
+  Auth:
+    ☐ Preciso entender como usar middleware com e sem API Routes no Next, porque não é igual no Express que é só colocar um middleware lá e interceptar as requests.
+
   Database:
-    ☐ Criar base de dados SQL com PostgreSQL
+    ✔ Criar base de dados SQL com PostgreSQL @done(22-01-02 12:09)
       ✔ Criar relacionamentos @done(21-12-01 22:13)
       ✔ Escrever SQL tabelas @started(21-12-01 22:13) @done(21-12-01 22:13) @lasted(48s)
-      ☐ Criar as tabelas no BD Heroku (lembrar da tabela sprites, se precisar)
-      ☐ Popular tabelas
+      ✔ Criar as tabelas no BD Heroku (lembrar da tabela sprites, se precisar) @done(22-01-02 12:07)
+      ✔ Popular tabelas @done(22-01-02 12:07)
       
-      - Problema na população da tabela pokemon_moves. Ela é muito grande e complicado de ficar testando e executando, mas agora parece que tem algo duplicado, preciso ver o que é.
-      - As tabelas de junção de pokemon (stats, species e types, especificamente) com outra coisa execederam o tamanho permitido no heroku. Preciso resolver essa para em 7 dias, contando do dia 5/12.
+      - Problema na população das tabelas pokemon_moves e pokemon_stats. Elas são muito grandes e o plano free do heroku não suporta a quantidade de linhas (máx. 10k linhas no total)
       
       - Eu não usei todas as tabelas do Veekun e seus relacionamentos, peguei só as que interessavam e seus respectivos relacionamentos com a tabela "pokemon"
       - Converter CSV em Insert Into (https://konbert.com/convert) ou um mais completo (https://www.convertcsv.com/csv-to-sql.htm)
@@ -20,7 +22,7 @@ Objetivos:
       - Base de dados SQLite (https://veekun.com/dex/downloads#other-files), arquivo "Full database as gzipped SQLite (15.1MB)"
       - Desenhar o relacionamento (se precisar) (https://app.dbdesigner.net/designer/schema/476323), logar com o Github
 
-    ☐ Utilizar Prisma como ORM
+    ✔ Utilizar Prisma como ORM @done(22-01-02 12:10)
       Mais fácil criar a tabela usando Beekeeper ou PgAdmin do que pelo Prisma. Assim, basta usar o yarn prisma db pull e ele infere as tabelas e os relacionamentos.
     
     ☐ Criar base de dados MongoDB

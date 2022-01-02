@@ -1,5 +1,5 @@
-import Car from './icons/car.svg'
-import Moto from './icons/moto.svg'
-import Pin from './icons/pin.svg'
+import Google from './icons/google.svg'
+import Facebook from './icons/facebook.svg'
+import Twitter from './icons/twitter.svg'
 
-export { Moto, Car, Pin }
+export { Facebook, Google, Twitter }

@@ -1,5 +1,5 @@
-import { Pokedex } from 'src/common/libs/pokeApi'
 import { Pokemon } from 'pokenode-ts'
+import axios from '@api/axios'
 
 export type InitialsServiceType = {
   getInitials: () => Promise<[Pokemon, Pokemon, Pokemon]>
@@ -7,10 +7,8 @@ export type InitialsServiceType = {
 
 export const InitialsService: InitialsServiceType = {
   async getInitials() {
-    const bulbasaur = await Pokedex.getPokemonById(1)
-    const charmander = await Pokedex.getPokemonById(4)
-    const squirtle = await Pokedex.getPokemonById(7)
+    const response = await axios.get('/initials')
 
-    return await Promise.all([bulbasaur, charmander, squirtle])
+    return response.data
   }
 }

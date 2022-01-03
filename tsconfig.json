@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": ["dom", "dom.iterable", "esnext", "ES6"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "ES6"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,20 +21,52 @@
     "downlevelIteration": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/common/components/*"],
-      "@constants/*": ["src/common/constants/*"],
-      "@context/*": ["src/common/context/*"],
-      "@helpers/*": ["src/common/helpers/*"],
-      "@hooks/*": ["src/common/hooks/*"],
-      "@api/*": ["src/common/api/*"],
-      "@styles/*": ["src/common/styles/*"],
-      "@store/*": ["src/common/store/*"],
-      "@pages/*": ["src/pages/*"],
-      "@public/*": ["public/*"],
-      "@images/*": ["public/images/*"],
-      "@icons/*": ["public/icons/*"]
-    }
+      "@components/*": [
+        "src/common/components/*"
+      ],
+      "@constants/*": [
+        "src/common/constants/*"
+      ],
+      "@context/*": [
+        "src/common/context/*"
+      ],
+      "@helpers/*": [
+        "src/common/helpers/*"
+      ],
+      "@hooks/*": [
+        "src/common/hooks/*"
+      ],
+      "@api/*": [
+        "src/common/api/*"
+      ],
+      "@styles/*": [
+        "src/common/styles/*"
+      ],
+      "@store/*": [
+        "src/common/store/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@public/*": [
+        "public/*"
+      ],
+      "@images/*": [
+        "public/images/*"
+      ],
+      "@icons/*": [
+        "public/icons/*"
+      ]
+    },
+    "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.svg"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.svg"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

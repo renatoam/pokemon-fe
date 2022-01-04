@@ -1,26 +1,11 @@
-// import axios from 'axios'
 import { initialsUseCases } from '@api/pokemons/initials'
 import { useEffect, useState } from 'react'
 import { useQuery } from 'react-query'
-// import { PokemonType } from 'src/common/types/types'
-// import {Pokedex} from 'pokeapi-js-wrapper'
 import { getCLS, getFID, getLCP } from 'web-vitals'
-// import { useRouter } from 'next/router';
-
-// import { Card, Figure, Wrapper } from '@styles/pages/home'
 
 export default function HomePage() {
   const [pokemons, setPokemons] = useState<any[]>([])
   const { isLoading, error, data } = useQuery('initials', () => initialsUseCases.getInitials())
-  // const router = useRouter()
-
-  // useEffect(() => {
-  //   const token = document.cookie
-
-  //   console.log({ token })
-
-  //   if (!token) router.push('/auth/signin')
-  // }, [])
 
   useEffect(() => {
     if (!data) return
@@ -31,7 +16,6 @@ export default function HomePage() {
   }, [data])
 
   useEffect(() => {
-    console.log({ pokemons })
     getCLS(console.log)
     getFID(console.log)
     getLCP(console.log)
